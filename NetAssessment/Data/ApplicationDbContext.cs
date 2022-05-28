@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using NetAssessment.Logic;
+using NetAssessment.Models;
 
 namespace JWTAuthentication.Authentication
 {
@@ -14,5 +15,7 @@ namespace JWTAuthentication.Authentication
         {
             base.OnModelCreating(builder);
         }
+
+        public DbSet<Product> Product { get; set; }
     }
 }
